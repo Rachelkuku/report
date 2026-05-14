@@ -72,6 +72,8 @@ export function generateReportPrompt(state: ReportFormState): string {
 10. 마지막에 보고서에 붙이면 좋은 첨부자료를 추천한다.
 11. 원본 자료의 사실관계는 임의로 변경하지 말 것.
 12. 보고서 작성 시 PDCA(Plan-Do-Check-Act) 사이클과 5W3H(Who·What·When·Where·Why·How·How much·How many) 원칙을 적용하여 논리적 흐름과 구체성을 갖춰 작성한다.
+13. 일자 표시는 "년, 월, 일" 문자를 생략하고 "."으로 구분한다. (예: 2026.05.14)
+14. 숫자는 아라비아 숫자를 원칙으로 하되, 금액 등 중요한 경우 한글을 병기할 수 있다. (예: 금 1,500,000원(일백오십만원))
 
 [추천 목차]
 ${toc}

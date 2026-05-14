@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-type Level = '담당' | '팀장' | '본부장(실장)' | '임원' | '대표이사';
+type Level = '담당' | '팀장' | '본부장(실장)' | '임원' | '대표이사' | '감사대상';
 
 interface Item {
   id: string;
@@ -21,6 +21,7 @@ const LEVEL_COLOR: Record<Level, string> = {
   '본부장(실장)': 'bg-teal-100 text-teal-700',
   '임원':        'bg-orange-100 text-orange-700',
   '대표이사':    'bg-red-100 text-red-700',
+  '감사대상':    'bg-purple-100 text-purple-700',
 };
 
 const CATEGORIES: Category[] = [
@@ -458,6 +459,15 @@ const CATEGORIES: Category[] = [
       { id: '121', matter: '일상감사에 관한 사항 — 2. 팀장 전결사항', level: '본부장(실장)' },
       { id: '122', matter: '기타 감사사항 — 1. 주요사항', level: '임원' },
       { id: '122', matter: '기타 감사사항 — 2. 기타사항', level: '본부장(실장)' },
+      // 별표 — 일상감사의 범위 (감사직무취급요령 별표)
+      { id: '별표', matter: '일상감사 범위 — 1. 규정 및 요령의 제정 또는 개정', level: '감사대상' },
+      { id: '별표', matter: '일상감사 범위 — 2. 중요한 소송과 중재에 관한 사항', level: '감사대상' },
+      { id: '별표', matter: '일상감사 범위 — 3. 예산지출 매 건당 2천만원 초과 (인건비·공공요금·판공비 등 제외)', level: '감사대상' },
+      { id: '별표', matter: '일상감사 범위 — 4. 가지급금 매 건당 1천만원 초과', level: '감사대상' },
+      { id: '별표', matter: '일상감사 범위 — 5. 주요 제 계약의 체결 및 계약의 주요변경', level: '감사대상' },
+      { id: '별표', matter: '일상감사 범위 — 6. 자산의 매각·폐기처분 및 주요물자 관리', level: '감사대상' },
+      { id: '별표', matter: '일상감사 범위 — 7. 결산에 관한 사항', level: '감사대상' },
+      { id: '별표', matter: '일상감사 범위 — 8. 기타 대표이사가 지시한 사항', level: '감사대상' },
     ],
   },
   {
@@ -481,7 +491,7 @@ const CATEGORIES: Category[] = [
   },
 ];
 
-const LEVEL_ORDER: Level[] = ['담당', '팀장', '본부장(실장)', '임원', '대표이사'];
+const LEVEL_ORDER: Level[] = ['담당', '팀장', '본부장(실장)', '임원', '대표이사', '감사대상'];
 
 export default function DelegationPage() {
   const navigate = useNavigate();

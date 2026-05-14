@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import DocPage from './pages/DocPage';
 import ReportPage from './pages/ReportPage';
-
 import ExamplesPage from './pages/ExamplesPage';
 import RetentionPage from './pages/RetentionPage';
+import DelegationPage from './pages/DelegationPage';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
             <Route path="/report" element={<ReportPage />} />
 
             <Route path="/examples" element={<ExamplesPage />} />
+            <Route path="/delegation" element={<DelegationPage />} />
             <Route path="/retention" element={<RetentionPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

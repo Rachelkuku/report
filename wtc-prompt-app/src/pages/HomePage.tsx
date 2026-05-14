@@ -113,6 +113,28 @@ export default function HomePage() {
           </button>
           
           <button
+            onClick={() => navigate('/delegation')}
+            className="group bg-gradient-to-r from-violet-50/50 to-transparent rounded-2xl border border-violet-50 p-5 text-left hover:border-violet-100 hover:from-violet-50 transition-all flex items-center justify-between"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                <svg className="w-6 h-6 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-gray-800">위임전결 가이드</h3>
+                <p className="text-[13px] text-gray-500 mt-1 font-medium">위임전결요령 별표 기준 — 전결사항별 결재권자 한눈에 확인</p>
+              </div>
+            </div>
+            <div className="text-violet-300 group-hover:text-violet-500 transition-colors mr-2">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </button>
+
+          <button
             onClick={() => navigate('/retention')}
             className="group bg-gradient-to-r from-orange-50/50 to-transparent rounded-2xl border border-orange-50 p-5 text-left hover:border-orange-100 hover:from-orange-50 transition-all flex items-center justify-between"
           >

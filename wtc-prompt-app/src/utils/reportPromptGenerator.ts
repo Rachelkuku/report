@@ -67,10 +67,11 @@ export function generateReportPrompt(state: ReportFormState): string {
 5. 항목 마커는 ㅇ → - → ㆍ 순서를 기본으로 한다.
 6. 수치성 내용은 표로 정리한다.
 7. 문장은 짧고 보고용 문체로 작성한다.
-8. 마지막은 "(끝)"으로 마무리한다.
+8. 마지막 단어에 한글자 띄고 끝. 으로 마무리한다.
 9. 입력되지 않은 사실은 임의로 만들지 말고 "직접 입력"으로 표시한다.
 10. 마지막에 보고서에 붙이면 좋은 첨부자료를 추천한다.
 11. 원본 자료의 사실관계는 임의로 변경하지 말 것.
+12. 보고서 작성 시 PDCA(Plan-Do-Check-Act) 사이클과 5W3H(Who·What·When·Where·Why·How·How much·How many) 원칙을 적용하여 논리적 흐름과 구체성을 갖춰 작성한다.
 
 [추천 목차]
 ${toc}
